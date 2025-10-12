@@ -1,0 +1,59 @@
+---
+id: "blinkist_figma_plugin_automation"
+topic: "Figma Plugin Automation"
+title: "How a Self-Built Figma Plugin Streamlined Content Production"
+company: "Blinkist"
+company_logo: "/blinkist-logo.png"
+date: "2025-09-01"
+summary:
+  impact: "Reduced content production time from 30 minutes to under one minute per piece by automating Figma templates with a custom-built plugin."
+  myRole: "Developed the Figma plugin and designed the workflow integration between Airtable and Figma using AI-assisted coding."
+  challenge: "Manual production of learning materials was slow and error-prone, requiring repetitive copy-pasting between Airtable and Figma."
+  solution: "Built a Figma plugin that automatically populates design templates with Airtable data, combining AI-generated code with manual iteration to ensure stability and usability."
+tags:
+  - "tooling"
+---
+
+## When Templates Became a Bottleneck
+
+The content team at Blinkist started adding new learning formats — infographics, deep dives, worksheets, and Blink PDFs — to expand the learning experience.  
+Each piece had to be built in Figma using templates, while the content itself lived in Airtable. Combining the two meant about thirty minutes of copy-pasting per item. It worked, but it didn’t scale.
+
+<ArticleImage
+  src="/case-studies/blinkist-learning-resources.png"
+  alt="Example of learning resources dislpayed in the product"
+  caption="Additional resources needed to be produced"
+  size="large"
+/>
+
+## A Simple Question That Sparked the Idea
+
+One day in our group chat, someone asked if there was any way to make this process easier. That question kicked off an idea: what if the templates could populate themselves? I suggested trying to build a Figma plugin that connects directly to Airtable.
+
+I knew Figma had a plugin API, but I’d never built one. There were plenty of unknowns — authentication, data mapping, layout consistency. I have coding experience but I’m not an engineer. Still, curiosity and a bit of frustration were enough to get me started.
+
+## Building the First Version
+
+My main ally was GitHub Copilot, which I’d used before as a coding partner. I described what I wanted, let the AI generate a draft, and then iterated line by line.  
+The first step was preparing the Figma templates: proper auto-layout, consistent naming, and clear structure so the code could target each element. When I saw the first template populate automatically, it felt like magic. The proof of concept used one format — Deep Dives — and it worked.
+
+## From Prototype to Production
+
+Building a stable version took trial and error. “Vibe coding” with AI is fast but fragile; when something broke, I had to understand why and guide the model toward a fix. Debugging OAuth authentication, adjusting layouts, re-testing the data flow — all part of the process. Each loop made the plugin more reliable.
+
+When the team asked to include Blink PDFs, the challenge grew. It wasn’t just a single page anymore but multi-page exports and bulk generation. The more complex the plugin became, the less I could rely on AI alone. It accelerated progress, but human judgment stayed essential — structuring logic, reviewing output, and refining architecture where the AI couldn’t.
+
+<ArticleImage
+  src="/case-studies/blinkist-learning-resources-plugin.gif"
+  alt="Demo of the plugin"
+  caption="The plugin creates the Blink PDF in seconds"
+  size="large"
+/>
+
+## What Changed
+
+> I just want it recorded how much we appreciated your skills and help in automating the production of the Deep Dives and Blink PDFs. It's not just your skills in making things happen — you were supportive and reactive to any issues and tweaks that were needed. We set ambitious goals for the production of this new format and you made sure we hit them. The resources you've saved us will add into the EURO 100,000s when all production is factored in. — **VP Content, Blinkist**
+
+Eventually, the plugin connected Airtable and Figma seamlessly. What once took over thirty minutes now happened in under one. The content team adopted it immediately and started producing materials faster than ever. Other teams noticed and began exploring how similar automation could support their workflows too.
+
+The main lesson: don’t shy away from building your own workflows and automation. You don’t have to be an engineer to make a meaningful impact. With today’s AI tools, small bits of initiative and technical curiosity can turn repetitive design work into scalable systems.

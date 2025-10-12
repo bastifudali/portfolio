@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
+
+:root {
+  --gray-100: #f5f5f5;
+  --gray-300: #ededed;
+  --gray-700: #616161;
+  --gray-900: #212121;
+  --teal-500: #593ef5;
+  --teal-100: #d1d5ff;
+  --mustard-500: #ffb300;
+}
+
+@theme {
+  --font-display: "Work Sans", sans-serif;
+  --font-sans: "Inter", sans-serif;
+
+  --color-background: var(--gray-100);
+  --color-surface: var(--gray-300);
+  --color-content_primary: var(--gray-900);
+  --color-content_secondary: var(--gray-700);
+  --color-accent: var(--teal-500);
+  --color-accent-background: var(--teal-100);
+  --color-on_accent: var(--gray-100);
+  --color-decorative: var(--mustard-500);
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer theme {
+  .dark {
+    --color-background: var(--gray-900);
+    --color-surface: var(--gray-700);
+    --color-content_primary: var(--gray-100);
+    --color-content_secondary: var(--gray-300);
+    --color-accent: var(--teal-500);
+  }
+}

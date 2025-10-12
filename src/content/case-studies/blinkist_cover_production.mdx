@@ -1,0 +1,103 @@
+---
+id: "blinkist_cover_production"
+topic: "AI Cover Production"
+title: "From Freelancers to Fast Lanes: Automating Blink Cover Production with AI"
+company: "Blinkist"
+company_logo: "/blinkist-logo.png"
+date: "2025-07-10"
+summary:
+  impact: >
+    Reduced cover production time from two weeks to minutes and saved 50k euros annually by automating the workflow with AI.
+  myRole: >
+    Led the design and implementation of an AI-assisted cover generation tool, combining automation with human oversight to streamline production.
+  challenge: >
+    Outsourced cover creation was slow and costly, while early AI experiments raised doubts about quality and feasibility.
+  solution: >
+    Developed a web-based workflow where AI generates cover variants and humans review, iterate, and approve — blending automation with judgment for speed and control.
+tags:
+  - "tooling"
+---
+
+## Why Blink Covers Needed a Rethink
+
+AI has quickly moved from buzzword to tool, but figuring out where it really adds value is less obvious.
+When we turned our attention to Blink cover production, the opportunity was striking: a task that needed consistency, speed, and scale — but not design perfection.
+The call was clear: could AI help us build a workflow to streamline the cover production?
+
+<ArticleImage
+  src="/case-studies/blinkist-covers.png"
+  alt="Original book covers and their Blink counterparts"
+  caption="We transform original book covers into Blinkist's signature style — could AI handle this creative task?"
+  size="large"
+/>
+
+## Doubts, Ethics, and First Experiments
+
+At first, the idea of using AI for cover production raised doubts. Would the results be anywhere near the quality we got from freelancers?
+And as a designer, there was also a moral hesitation: building a system that replaces creative jobs isn’t easy to justify.
+Together with our Brand Designer, I began experimenting with prompts and different AI models. The early outputs were surprisingly encouraging.
+We started to believe that AI could do this job well enough to replace the slow and costly freelancer process — but only if we designed the right workflow around it.
+
+## From AI Tests to a Working Workflow
+
+That's when I came across [Anthropic's article on building effective agents](https://www.anthropic.com/engineering/building-effective-agents).
+It explained how automation works best when you break a process into smaller, composable steps — often chaining tasks or using evaluator–optimizer loops rather than asking AI to do everything at once.
+This framing clicked with our experiments and helped us formalize a workflow:
+
+- Find the original book cover
+- Generate three blink cover variants
+- Review the outputs
+- Provide feedback
+- Iterate until the result meets acceptance criteria
+
+<ArticleImage
+  src="/case-studies/blinkist-covers-workflow.png"
+  alt="AI cover generation workflow diagram"
+  caption="The iterative workflow showing how AI generates variants while humans provide guidance and approval"
+  size="large"
+/>
+
+## Building the Tool
+
+The structure worked, but cracks quickly showed. Sometimes the AI picked the wrong original cover, introduced typos, or produced layouts that were simply unusable. The solution was to keep humans in the loop — but in a way that didn’t add friction.
+I built a web interface where content producers could run the entire process themselves. From this dashboard, they could:
+
+- Pull in book data directly from Airtable
+- Start a new job and let the AI generate three cover variants
+- Compare the variants side by side and flag issues
+- Provide structured feedback that triggered a new iteration
+- Approve the final cover once it met the “good enough” threshold
+
+In practice, the tool shifted who was involved.
+It replaced the freelancers who used to design covers, but it also enabled the content team to take ownership of the process for the first time.
+What used to be outsourced creative labor became an internal, AI-assisted workflow — faster, cheaper, and still guided by human judgment.
+
+<ArticleImage
+  src="/case-studies/blinkist-cover-tool-1.png"
+  alt="AI cover generation workflow diagram"
+  size="large"
+/>
+<ArticleImage
+  src="/case-studies/blinkist-cover-tool-2.png"
+  alt="AI cover generation workflow diagram"
+  caption="The iterative workflow showing how AI generates variants while humans provide guidance and approval"
+  size="large"
+/>
+
+## Saving Weeks of Work and Thousands of Euros
+
+The impact was immediate.
+
+- What once took up to two weeks could now be done in minutes.
+- Annual costs dropped by tens of thousands of euros.
+
+We handed the tool over, and adoption spread quickly. Small adjustments and improvements were made along the way, but the system soon became a reliable part of the publishing process.
+What started as an experiment had turned into an everyday workflow.
+
+## Lessons for Anyone Building Automated Workflows
+
+The key takeaway is broader than this one project.
+Automation works best when you think in terms of agentic workflows: break down the task into subtasks, decide where AI adds value, where simpler tools are more reliable, and where human judgment is essential.
+That framing helps shift the conversation from “AI replacing humans” to “AI enabling teams.”
+There’s also an ethical side: automation doesn’t just empower — it can replace. In this case, we accepted that trade-off because the economics and purpose were clear.
+For covers, we weren’t aiming for award-winning design — we just needed something good enough, fast, and consistent. And it’s not a question of if AI takes over these kinds of simple design tasks, but when.

@@ -1,0 +1,22 @@
+---
+import ArticleImageReact from "./ArticleImage.tsx";
+
+interface Props {
+  src: string;
+  alt: string;
+  caption?: string;
+  className?: string;
+  size?: "small" | "medium" | "large" | "full";
+}
+
+const { src, alt, caption, className, size } = Astro.props;
+---
+
+<ArticleImageReact 
+  client:load
+  src={src}
+  alt={alt}
+  caption={caption}
+  className={className}
+  size={size}
+/>

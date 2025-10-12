@@ -1,0 +1,21 @@
+---
+// Base layout for the site
+const { title } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+    <title>{title}</title>
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-background">
+    <slot />
+  </body>
+  <footer class="text-content_secondary py-8 max-w-4xl mx-auto px-4">
+    &copy; Sebastian Fudali – 2025
+  </footer>
+</html>

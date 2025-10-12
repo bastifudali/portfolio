@@ -1,0 +1,64 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Prose from "../../components/Prose.astro";
+import ArticleImageWrapper from "../../components/ArticleImageWrapper.astro";
+import { getCollection } from 'astro:content';
+import CaseStudySummary from "../../components/CaseStudySummary.astro";
+
+export async function getStaticPaths() {
+  const entries = await getCollection('case-studies');
+  return entries.map(entry => ({
+    params: { id: entry.data.id }
+  }));
+}
+
+const { id } = Astro.params;
+const entries = await getCollection('case-studies');
+const entry = entries.find((e) => e.data.id === id);
+if (!entry) {
+  throw new Error('Case study not found');
+}
+const { Content } = await entry.render();
+
+const components = {
+  ArticleImage: ArticleImageWrapper,
+};
+---
+<Layout title={entry.data.title}>
+  <!-- Header with profile and name -->
+  <header>
+    <div class="max-w-4xl mx-auto px-4 py-3">
+      <a href="/" class="flex items-center space-x-2 hover:opacity-80 transition-opacity w-fit">
+        <img 
+          src="/profile.jpeg" 
+          alt="Sebastian Fudali" 
+          class="w-8 h-8 rounded-full object-cover"
+        />
+        <span class="text-base font-medium text-content_primary">Sebastian Fudali</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="max-w-4xl mx-auto px-4 mt-8 mb-6">
+    <div class="text-accent font-bold text-md mb-2">{entry.data.topic.toUpperCase()}</div>
+    <h1 class="text-content_primary font-bold text-4xl mb-8">{entry.data.title}</h1>
+    <div class="text-content_secondary text-md flex items-center">
+      <img src={entry.data.company_logo} alt={`${entry.data.company} logo`} class="inline-block w-6 h-6 mr-2 rounded-full" />
+      <span>{entry.data.company}</span>
+      <span class="mx-1">•</span>
+      <span>{new Date(entry.data.date).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}</span>
+    </div>
+  </div>
+  <div class="max-w-4xl mx-auto mb-10">
+    <CaseStudySummary
+      impact={entry.data.summary.impact}
+      myRole={entry.data.summary.myRole}
+      challenge={entry.data.summary.challenge}
+      solution={entry.data.summary.solution}
+      class="max-w-4xl mx-auto px-4 mb-4"
+    />
+  </div>
+  <Prose class="max-w-4xl mx-auto px-4">
+    <Content {components} />
+  </Prose>
+</Layout>

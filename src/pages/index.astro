@@ -1,16 +1,53 @@
 ---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import { getCollection } from 'astro:content';
+import CaseStudyList from "../components/CaseStudyList.tsx";
+import Timeline from "../components/Timeline.tsx";
+import Toolbox from "../components/Toolbox.tsx";
+import PrivateLife from "../components/PrivateLife.tsx";
+import { experienceData } from '../content/experienceData.ts';
+import { tools } from '../content/toolsData.ts';
+import { privateLifeActivities } from '../content/privateLifeData.ts';
 
+const caseStudies = await getCollection('case-studies');
+const tags = [
+	{ id: 'design_system', label: 'Design System' },
+	{ id: 'tooling', label: 'AI & Tooling' },
+	{ id: 'operations', label: 'Product Operations' },
+	{ id: 'people', label: 'People & Culture' },
+	/* { id: 'design', label: 'Design Lead' }, */
+]
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Sebastian Fudali">
+  	<Hero/>
+  	<CaseStudyList 
+  		client:load 
+  		caseStudies={caseStudies} 
+  		tags={tags}
+		className="max-w-4xl mx-auto px-4 mb-10" 
+  	/>
+  	<Toolbox 
+  		client:load 
+  		tools={tools}
+  		title="My Toolbox" 
+  		subtitle="How I get things done"
+		className="max-w-4xl mx-auto px-4 mb-10"
+  	/>
+  	<Timeline 
+  		client:load 
+  		items={experienceData} 
+  		title="My Professional Journey" 
+  		subtitle="From design to design operations"
+		className="max-w-4xl mx-auto px-4 mb-10"
+  	/>
+	<!--
+  	<PrivateLife 
+  		client:load 
+  		activities={privateLifeActivities}
+  		title="My Life Outside Work" 
+  		subtitle="What I enjoy doing in my free time"
+		className="max-w-4xl mx-auto px-4 mb-10"
+  	/>
+	 -->
+</Layout>
