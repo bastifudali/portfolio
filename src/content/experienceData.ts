@@ -17,7 +17,7 @@ export const experienceData: TimelineItem[] = [
     company: "Blinkist",
     company_logo: "/blinkist-logo.png",
     description:
-      "Aligning practices of the product design, research and brand design team",
+      "Streamlining product, design, and research practices; automating workflows",
   },
   {
     id: "go1-2024",

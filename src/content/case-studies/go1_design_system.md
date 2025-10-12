@@ -4,7 +4,7 @@ topic: "Go1 Design System"
 title: "Building a Scalable and Flexible Design System at Go1"
 company: "Go1"
 company_logo: "/go1-logo.png"
-date: "2024-05-01"
+date: "2024-04-01"
 summary:
   impact: "Laid the foundation for a successful company-wide rebrand by introducing a flexible, scalable design system that aligned design and engineering teams across continents."
   myRole: "Led the design system initiative from inception to handover, collaborating with engineers, designers, and product stakeholders."

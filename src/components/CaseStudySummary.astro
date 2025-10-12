@@ -1,6 +1,6 @@
 ---
 import { TrendingUp, User, Zap, Lightbulb } from "lucide-react";
-import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card.tsx";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card.tsx";
 
 const { impact, myRole, challenge, solution, class: className, ...rest } = Astro.props;
 
@@ -14,16 +14,18 @@ const items = [
 
 <div class={`grid md:grid-cols-2 gap-6 ${className ?? ''}`} {...rest}>
     {items.map(item => (
-        <Card className="p-6">
-            <div class="flex flex-row text-accent font-bold mb-3">
-                <div class="mr-3">
-                    <item.icon size={20} />
+        <Card className="pointer-events-none">
+            <CardHeader>
+                <div class="flex flex-row text-accent font-bold">
+                    <div class="mr-3">
+                        <item.icon size={20} />
+                    </div>
+                    <div>{item.headline}</div>
                 </div>
-                <div>{item.headline}</div>
-            </div>
-            <div class="text-left text-content_primary text-md leading-relaxed">
+            </CardHeader>
+            <CardContent>
                 {item.text}
-            </div>
+            </CardContent>
         </Card>
     ))}
 </div>

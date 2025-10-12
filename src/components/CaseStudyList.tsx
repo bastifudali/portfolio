@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { ArrowRight } from "lucide-react";
 
 interface CaseStudy {
   slug: string;
@@ -67,7 +68,7 @@ export default function CaseStudyList({
           </Button>
         ))}
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {filtered
           .slice()
           .sort(
@@ -86,16 +87,21 @@ export default function CaseStudyList({
                   <CardTitle>{study.data.topic}</CardTitle>
                   <CardDescription>{study.data.title}</CardDescription>
                 </CardHeader>
-                <CardFooter>
+                <CardFooter className="flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <img
                       src={study.data.company_logo}
                       alt={`${study.data.company} logo`}
                       className="w-6 h-6 rounded-full object-cover"
                     />
-                    {study.data.company}
+                    <span>
+                      {study.data.company}, {study.data.date.slice(0, 7)}
+                    </span>
                   </div>
-                  , {study.data.date.slice(0, 7)}
+                  <div className="flex items-center gap-1 text-sm text-accent hover:text-accent/80 transition-colors">
+                    <span>View</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </div>
                 </CardFooter>
               </Card>
             </a>

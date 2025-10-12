@@ -64,7 +64,7 @@ export default function Timeline({
                   : "md:ml-auto md:pl-8"
               }`}
             >
-              <Card>
+              <Card className="pointer-events-none">
                 <CardHeader className="pb-2">
                   {item.overline && (
                     <p className="text-sm text-muted-foreground font-medium">

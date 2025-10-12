@@ -29,7 +29,7 @@ export default function Toolbox({
 }: ToolboxProps) {
   return (
     <TooltipProvider>
-      <div className={`w-md mx-auto py-8 ${className || ""}`}>
+      <div className={`w-full md:w-md mx-auto py-8 ${className || ""}`}>
         {title && (
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-2 text-accent">{title}</h2>
