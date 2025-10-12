@@ -63,6 +63,7 @@ export default function CaseStudyList({
             onClick={() =>
               setSelectedTag(selectedTag === tag.id ? null : tag.id)
             }
+            className="cursor-pointer"
           >
             {tag.label}
           </Button>

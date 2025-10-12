@@ -11,10 +11,7 @@ summary:
   challenge: "Blinkist needed to meet WCAG 2.1 AA standards under new EU law with limited developer capacity and a legacy front-end."
   solution: "Created a practical requirements document, prioritized high-impact fixes, implemented design and content-level improvements, and ensured full compliance through collaboration and audits."
 tags:
-  - "accessibility"
-  - "design-ops"
-  - "compliance"
-  - "collaboration"
+  - "design_system"
 ---
 
 ## When Design Became a Legal Requirement
@@ -29,7 +26,7 @@ So I took ownership of bringing our web product up to standard.
 ## From Legal Text to a Practical Plan
 
 The first hurdle was simply understanding what the law required.  
-I translated WCAG 2.1 AA guidelines into concrete, actionable tasks using the **A11Y Project Checklist** as a baseline.
+I translated WCAG 2.1 AA guidelines into concrete, actionable tasks using the [**A11Y Project Checklist**](https://www.a11yproject.com/checklist/) as a baseline.
 
 From there, I created a detailed **requirements document** that scoped what parts of Blinkist.com were legally relevant.  
 According to the European Accessibility Act, any page related to “contract formation” — even a free trial signup — falls under compliance. That included:
@@ -42,53 +39,35 @@ According to the European Accessibility Act, any page related to “contract for
 
 Pages like the Help Center or Magazine were noted but deprioritized pending legal clarity.
 
-To make it actionable, I categorized every issue by priority:
-
-- 🔴 **High:** blocks user access (e.g., missing form labels, no visible focus states, poor color contrast)
-- 🟡 **Medium:** causes friction (e.g., wrong heading markup, inconsistent ARIA roles)
-- 🟢 **Low:** polish or enhancements (e.g., prefers-reduced-motion support)
+<ArticleImage
+  src="/case-studies/blinkist-a11y-priorities.png"
+  alt="Table outlining the priorty system: high, medium and low criticality"
+  caption="To make requirements actionable, I categorized every issue by priority"
+  size="large"
+/>
 
 ## Tackling Compliance, One Fix at a Time
 
 Once the scope was clear, I began implementing fixes directly — handling about 90% myself.
 
-### Design and Content Fixes
-
-- Adjusted all color contrast ratios to meet WCAG 1.4.3 standards (see before/after in the requirements doc, page 3–5).
-- Standardized focus states with a clear blue ring (`outline-color: #0365F2`).
+- Adjusted all color contrast ratios to meet WCAG 1.4.3 standards.
+- Standardized focus states and fixed keyboard navigation flow.
 - Rewrote misleading or missing alt texts for decorative and functional images.
-- Fixed headline hierarchy (H1–H3) across the homepage, onboarding, and pricing pages.
+- Add ARIA roles
+- Fixed headline hierarchy (H1–H3)
 - Updated vague “here” links in policy pages with descriptive text for screen readers.
 
-### Engineering Collaboration
+Despite a limited dev window, collaboration was efficient: I partnered with engineers to review my code and implement the few fixes that were more complex due to the legacy codebase.
 
-For more complex issues, I worked with engineers to:
+<ArticleImage
+  src="/case-studies/blinkist-a11y-onboarding.png"
+  alt="Screenshot of Blinkist's onboarding flow having focus states"
+  caption="Keyboard navigation and focus states now work seamlessly throughout onboarding"
+  size="large"
+/>
 
-- Add ARIA roles to modal dialogs and buttons.
-- Fix keyboard navigation flow on sign-up and gift card modals.
-- Adjust the reading order in onboarding pages to align with screen readers.
+## The Outcome
 
-Despite a limited dev window, collaboration was efficient: design handled what could be done through content and CSS; engineering handled markup and structural fixes.
-
-## Challenges Along the Way
-
-Refactoring old code came with surprises.  
-Some accessibility fixes broke visual layouts or triggered regressions in modals. Setting up local dev environments took hours each time — slowing iteration.
-
-But the biggest challenge was interpretation: accessibility laws are written for lawyers, not designers. Translating abstract standards like “perceivable” or “operable” into real UI work required judgment calls.
-
-Still, progress was visible and measurable after every iteration.
-
-## The Turning Point
-
-After two weeks of concentrated work, all 🔴 **high-priority issues** were resolved.  
-We ran internal audits using **axe DevTools** and **Wave**, which confirmed WCAG 2.1 AA compliance across all scoped pages.
-
-No external agency was required.  
-One designer and one engineer had achieved full legal compliance in less than a month.
-
-## What Changed
-
-- Blinkist.com now meets **WCAG 2.1 AA** standards.
-- All **high-priority accessibility blockers (100%)** fixed.
-- **~90%** of total fixes implemented by design without requiring engineering resources.
+- Blinkist now meets **WCAG 2.1 AA** standards.
+- All **high and medium priority accessibility blockers** fixed.
+- **~90%** of total fixes implemented without requiring engineering resources.

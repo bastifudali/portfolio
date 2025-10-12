@@ -1,7 +1,7 @@
 ---
 id: "ck_cx_map"
 topic: "Customer Experience Map"
-title: "Forging a New Path: The Compass Team's Journey to Strategic Clarity"
+title: "From Vision to Strategy: Creating Chefkoch's Customer Experience Map"
 company: "Chefkoch"
 company_logo: "/chefkoch-logo.png"
 date: "2022"

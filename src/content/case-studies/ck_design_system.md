@@ -1,115 +1,78 @@
 ---
 id: "ck_design_system"
-topic: "Chefkoch Design System"
-title: "How We Built a Design System That Transformed Our Product Development"
+topic: "Design System"
+title: "Designing the Backbone: How We Built Chefkoch’s Unified Design System"
 company: "Chefkoch"
 company_logo: "/chefkoch-logo.png"
-date: "2021"
+date: "2021-06-01"
 summary:
-  impact: ""
-  myRole: ""
-  challenge: ""
-  solution: ""
+  impact: "Accelerated product delivery, reduced inconsistencies, and created a shared language between design and engineering across all Chefkoch products."
+  myRole: "Led the design strategy, guided the transition from Adobe XD to Figma, and partnered with engineers to define scalable foundations and purposeful components."
+  challenge: "Fragmented workflows between designers and developers slowed feature delivery and led to inconsistent user experiences."
+  solution: "Created a unified design system built on semantic design tokens and purpose-driven components, aligning Figma libraries with a matching Vue component library."
 tags:
-  - "design_system"
+  - "design-system"
+  - "tooling"
+  - "collaboration"
 ---
 
-# How We Built a Design System That Transformed Our Product Development
+## A Foundation for Speed and Consistency
 
-## 🚀 Impact First
+What started as a small side project turned into one of the most impactful tools in Chefkoch’s product development process.  
+The new design system became the backbone connecting design and engineering, enabling faster delivery, fewer inconsistencies, and smoother collaboration.
 
-Our **Design System** started as a side project — yet today, it’s a cornerstone of our product development process.
+Within months, a team of just **two designers and two engineers** reshaped how we built products — without ever slowing down feature work.
 
-Here’s what we achieved:
+## The Problem We Needed to Solve
 
-- **Accelerated feature development:** faster design-to-code cycles
-- **Consistent user experience:** across multiple products and touchpoints
-- **Improved designer-developer collaboration:** shared language and tools
-- **Reduced errors and rework:** thanks to purposeful component definitions
+Designers were working in **Adobe XD**, while developers maintained a loose **HTML/CSS library** in Storybook.  
+Every new feature introduced visual drift and redundant work.  
+We were missing a shared system that would bring **speed, scale, and quality** together.
 
-A project led by just **two designers and two engineers** reshaped the way our entire team works.
+The vision was to create one source of truth for both design and code — a system that aligned tools, language, and output.
 
----
+## Moving to Figma and Setting the Foundation
 
-## The Challenge: Fragmented Design, Slow Progress
+Our first step was migrating the design workflow to **Figma**.  
+The switch enabled real-time collaboration, component-based design, and a direct bridge to front-end development.
 
-Before we built our design system, our workflow was messy:
+We rebuilt our Storybook as a **Vue component library**, designed to mirror the Figma components.  
+This pairing became the foundation for how we defined, documented, and shipped design decisions.
 
-- Designers worked in **Adobe XD**, while developers used a small, inconsistent **HTML/CSS library** in Storybook.
-- Visual and functional inconsistencies multiplied as the product grew.
-- The lack of a shared system meant each new feature required extra effort — slowing us down and introducing errors.
+The system was built on two layers:
 
-It was clear: we needed a unified system that would support **speed, scale, and quality**.
+- **Foundations:** colors, typography, spacing, and icons — all stored as semantic tokens and synced to code.
+- **Components:** reusable elements with defined purpose and boundaries to ensure visual and behavioral consistency.
 
----
+## Building Purpose-Driven Components
 
-## My Role
+Rather than following Atomic Design principles, we opted for a **simpler, purpose-driven approach**.  
+Each component was defined by _what it should achieve_ rather than _how it looks_.
 
-As a designer deeply involved in the product workflow, I saw both the pain points and the opportunity.
+We made deliberate decisions about which parts needed flexibility and which needed to stay strict.  
+This reduced redundant styling, made design intent clearer, and allowed designers to work faster without adding engineering overhead.
 
-I led the **design strategy**, drove the switch to better tools, and collaborated closely with engineering to ensure our new system would be both **usable and scalable**.
+## Adoption and Impact
 
----
+As soon as both design and code libraries were aligned, teams began using the system naturally.  
+Designers could assemble interfaces quickly; developers could implement them without guesswork.
 
-## The Journey
+The outcomes were tangible:
 
-### 1. Starting Small, Thinking Big
+- **Faster feature development** through reusable patterns
+- **Consistent user experiences** across multiple products
+- **Improved designer-developer collaboration** thanks to a shared structure and language
+- **Reduced QA and handoff friction**, leading to higher delivery confidence
 
-We formed a lean team — **two designers and two engineers** — and treated the design system as a side project with a big vision.
+What began as an internal initiative soon became **core infrastructure** for Chefkoch’s product ecosystem.
 
-### 2. Tooling Up: Switching to Figma
+## Lessons Learned
 
-The first breakthrough was moving from Adobe XD to **Figma**, which allowed us to:
+1. **Start small, but think long term.** A system that evolves with the product scales better than one that tries to do everything from day one.
+2. **Build with engineering, not for it.** Collaboration creates adoption.
+3. **Define flexibility intentionally.** Too much freedom kills consistency; too little kills creativity.
+4. **Keep it simple.** The best systems are easy to use and hard to misuse.
+5. **Treat it like a product.** Maintain, evolve, and listen to feedback.
 
-- Collaborate in real-time
-- Build a scalable, component-based design library
-- Better align design and engineering
-
-### 3. Building the Library
-
-We transformed our small HTML/CSS Storybook into a robust **Vue component library**, mirroring the Figma design system.
-
-### 4. Defining the Right Philosophy
-
-Instead of following Atomic Design, which we found too complex, we focused on two clear layers:
-
-- **Foundations:** colors, typography, spacing, icons
-- **Components:** fully self-contained elements with no cross-dependencies
-
-### 5. Purpose-Driven Components
-
-We defined components around **purpose and context**, not just appearance. This allowed designers and developers to:
-
-- Easily select the right variant for each use case
-- Avoid inconsistencies and redundant styling
-
-### 6. Empowering Designers With Properties
-
-By managing complexity through **component properties**, we enabled designers to work flexibly and independently — reducing engineering overhead and increasing design speed.
-
----
-
-## The Final Outcome
-
-✅ A highly adopted **pattern library** used across design and engineering  
-✅ **Faster development cycles**, with reusable, reliable components  
-✅ A more **consistent, polished user experience**  
-✅ Stronger **collaboration** and a shared language between teams
-
-Even as a side project, this initiative created a **lasting impact** on how we design and build products.
-
----
-
-## Key Learnings
-
-1. **Start small — scale intentionally**
-2. **Build close designer-developer collaboration**
-3. **Focus on purpose-driven components**
-4. **Empower designers through great tooling and properties**
-5. **Keep simplicity at the core of your system**
-
----
-
-## Final Thought
-
-A design system isn’t just a library of components. It’s a catalyst for **faster, better, more consistent product development** — and it can start with a small team and a bold vision.
+The Chefkoch Design System didn’t just standardize our UI — it changed how we work.  
+It became the quiet engine behind every feature, ensuring consistency and speed while giving designers and developers a shared sense of ownership.

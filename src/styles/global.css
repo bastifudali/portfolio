@@ -6,8 +6,8 @@
   --gray-300: #ededed;
   --gray-700: #616161;
   --gray-900: #212121;
-  --teal-500: #593ef5;
-  --teal-100: #d1d5ff;
+  --teal-500: #1d5928;
+  --teal-200: #d4e8d7;
   --mustard-500: #ffb300;
 }
 
@@ -20,7 +20,7 @@
   --color-content_primary: var(--gray-900);
   --color-content_secondary: var(--gray-700);
   --color-accent: var(--teal-500);
-  --color-accent-background: var(--teal-100);
+  --color-accent-background: var(--teal-200);
   --color-on_accent: var(--gray-100);
   --color-decorative: var(--mustard-500);
 }

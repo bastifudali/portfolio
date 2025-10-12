@@ -1,0 +1,97 @@
+---
+id: "go1_design_system"
+topic: "Go1 Design System"
+title: "Building a Scalable and Flexible Design System at Go1"
+company: "Go1"
+company_logo: "/go1-logo.png"
+date: "2024-04-01"
+summary:
+  impact: "Established a scalable, token-based design system that aligned design and engineering teams across continents and became the foundation for Go1’s company-wide rebrand."
+  myRole: "Led the design system initiative from inception to handover, defining principles, foundations, and component architecture in close collaboration with engineers."
+  challenge: "Rebuilding the design system while the design language was still evolving, all while maintaining feature delivery and coordinating across time zones."
+  solution: "Created a token-driven system with tightly aligned Figma and code components, balancing flexibility for brand expression with consistency for product design."
+tags:
+  - "design_system"
+---
+
+## A system built for evolution
+
+When I joined Go1, the company was about to refresh its brand identity—a change that would later grow into a full rebrand.  
+That moment presented a unique opportunity: rather than patching up an aging design library, we could build a system that anticipated change.  
+Our goal wasn’t just visual alignment. It was to create a **scalable design infrastructure** that could support growth, adaptation, and collaboration across time zones and teams.
+
+## The foundation: design tokens as a source of truth
+
+At the heart of the system were its **foundations** — a set of design primitives expressed as semantic design tokens for color, typography, spacing, and motion.  
+These tokens weren’t static values in Figma; they were automatically **synced to the codebase**, ensuring every design decision could flow directly into production.  
+This setup established a single source of truth between design and engineering — and allowed the visual language to evolve without friction.
+
+<ArticleImage
+  src="/case-studies/go1-color-tokens.png"
+  alt="Extract of some primitive and semantic design tokens for colors"
+  size="large"
+/>
+
+<ArticleImage
+  src="/case-studies/go1-layout-tokens.png"
+  alt="Extract of some primitive and semantic design tokens to build layouts"
+  caption="Primitive and semantic design tokens define Go1's design language"
+  size="large"
+/>
+
+## The component layer: where design meets code
+
+The **component architecture** extended this philosophy.  
+Each Figma component was mapped directly to its code counterpart through **Figma Code Connect**, creating near-perfect alignment between design intent and implementation.  
+We used **Ark UI** as the foundation for our React components — a headless, accessible library that offered the right balance of structure and flexibility.
+
+Not all components were created equal. Some required **strict consistency**, such as buttons and form inputs, where predictability was key to usability.
+
+<ArticleImage
+  src="/case-studies/go1-content-card.png"
+  alt="The content card component and its component properties in Figma"
+  caption="The content card uses strict component properties to ensure consistency in its usage"
+  size="large"
+/>
+
+Others, like cards or banners, were intentionally **more flexible**, allowing teams to customize variants to accommodate product-specific requirements.
+
+<ArticleImage
+  src="/case-studies/go1-modal.png"
+  alt="The modal component and its component properties in Figma"
+  caption="The modal uses a sub component architecture that is highly flexible"
+  size="large"
+/>
+
+These explicit decisions around flexibility vs. constraint kept the system robust without becoming rigid.
+
+To support this alignment, we established naming conventions and documentation that reflected the same hierarchy across design and code.  
+Designers could trust components to behave as expected in production, and developers could rely on Figma as a precise representation of what they were building.
+
+## Built for collaboration and speed
+
+The system was intentionally lightweight and pragmatic.  
+By focusing on real product needs first, we avoided overengineering and created a design-to-code workflow that scaled naturally.  
+Daily asynchronous collaboration across Australia and Europe shaped the system into something that worked not just _in theory_, but in practice — for real teams shipping real products.
+
+## The impact
+
+The new system became the foundation for Go1’s rebrand and product consistency:
+
+- Brand updates could be implemented in hours instead of weeks.
+- Developers gained confidence and speed through clear, reusable patterns.
+- Designers enjoyed a coherent set of tools that improved efficiency and reduced rework.
+- Product teams across time zones spoke the same visual language.
+
+When the rebrand officially launched, the design system absorbed the new identity seamlessly — no rebuilds, no downtime, no guesswork.
+
+## From system to shared language
+
+Eventually, I handed over ownership to an internal designer, marking the system’s transition from _project_ to _product_.  
+It continued to evolve as more teams adopted it, shaping how Go1 designs, builds, and maintains experiences at scale.  
+What started as a rebrand enabler became something more enduring — a **shared language** between design and engineering.
+
+## What I learned
+
+The strength of a design system isn’t in how many components it has, but in **how clearly it defines relationships** — between tokens, components, and the people who use them.  
+A flexible foundation, clear alignment with code, and a balance between consistency and freedom made the Go1 Design System resilient to change — exactly as intended.
