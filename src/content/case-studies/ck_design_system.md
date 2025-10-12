@@ -11,9 +11,7 @@ summary:
   challenge: "Fragmented workflows between designers and developers slowed feature delivery and led to inconsistent user experiences."
   solution: "Created a unified design system built on semantic design tokens and purpose-driven components, aligning Figma libraries with a matching Vue component library."
 tags:
-  - "design-system"
-  - "tooling"
-  - "collaboration"
+  - "design_system"
 ---
 
 ## A Foundation for Speed and Consistency
