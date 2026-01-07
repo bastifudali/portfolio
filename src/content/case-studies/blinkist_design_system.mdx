@@ -1,0 +1,124 @@
+---
+id: "blinkist_design_system"
+topic: "Blinkist Design System"
+title: "From App-First to Web-Ready: Building Blinkist’s Web Design System"
+company: "Blinkist"
+company_logo: "/blinkist-logo.png"
+date: "2025-11-01"
+summary:
+  impact: "Reduced design–engineering friction, aligned Figma and code components, and laid the foundation for scalable web development."
+  myRole: "Design Lead for the Web Design System, facilitator between design and engineering"
+  challenge: "Building a robust web design system under high delivery pressure, without slowing down feature development."
+  solution: "Established shared design foundations, a collaborative design system team, and a component architecture aligned with frontend code."
+tags:
+  - "design_system"
+---
+
+## When web became business-critical, our foundations were not ready
+
+For a long time, Blinkist’s product development was unapologetically app-first. That focus worked well—until the business model began shifting toward B2B, and the web moved from a secondary channel to a strategic priority.
+
+The problem was simple and uncomfortable: our web foundations weren’t built for this moment. A web design system existed only in fragments, never treated as a first-class product. As expectations around speed, consistency, and scalability increased, the cracks became impossible to ignore.
+
+## Friction as a signal, not a failure
+
+Inside the design team, frustration was growing. Inconsistencies multiplied across the product. Designers and engineers spent more time aligning than building, often lacking a shared language to describe the same components. Each new feature triggered back-and-forth discussions that felt repetitive and inefficient.
+
+At the same time, there was real hesitation about addressing it head-on. Feature delivery pressure was high, and the question kept surfacing: _How do we invest in a design system without slowing everything else down?_
+
+## Making the misalignment visible
+
+The turning point came when I brought designers and engineers together to openly discuss the situation. What might have felt obvious individually became undeniable collectively: we were solving the same problems in parallel, using different mental models.
+
+That conversation created momentum. We agreed to pause, regroup on the design side, and intentionally redefine our design foundations for the web. It wasn’t a grand kickoff—but it was a clear commitment.
+
+## Building allies and shared ownership
+
+Instead of forming a rigid task force, we created an informal design system team. I led the initiative, but the strength of the work came from shared ownership. Designers actively chose areas to drive—typography, layout and spacing, color foundations—bringing both expertise and accountability.
+
+<ArticleImage
+  src="/case-studies/blinkist-design-system-foundations.png"
+  alt="Overview of our design system foundation documentation: colors, typography, layout, shapes, elevation"
+  caption="Re-defining and documenting our design foundations in a group effort"
+  size="large"
+/>
+
+## Designing for how things are actually built
+
+My focus centered on component architecture. The core question was not visual polish, but structure: How can we build components in Figma that truly reflect how they exist in code? Our frontend relied on the [shadcn component library](https://ui.shadcn.com/docs/components), and alignment here was non-negotiable.
+
+<ArticleImage
+  src="/case-studies/blinkist-design-system-shadcn.png"
+  alt="Screenshot of the shadcn component library"
+  caption="Shadcn component library"
+  size="large"
+/>
+
+The hardest challenge sat right at that intersection. React components are flexible, composed of nested sub-components. Figma, at the time, struggled to mirror this architecture cleanly. We were pushing against the limits of the tooling.
+
+Then came an important signal: Figma announced the upcoming release of [Slots](https://help.figma.com/hc/en-us/articles/35794667554839-What-s-new-from-Schema-2025#h_01K84PB569NTFMXBDS36C8DCPV). While we couldn’t use it immediately, it validated our direction. We knew we’d soon be able to mirror code-level sub-component architecture precisely. That confidence allowed us to double down on a scalable structure rather than compromise for short-term convenience.
+
+<ArticleImage
+  src="/case-studies/blinkist-design-system-slots.png"
+  alt="Illustration of Figma's Slots feature"
+  caption="Figma announcing Slots is a game changer for us"
+  size="large"
+/>
+
+## Early rewards, even while in progress
+
+The system is still a work in progress—but the impact is already visible. For the first time, design foundations and components are beginning to match meaningfully between Figma and code. Conversations with engineers are faster, clearer, and grounded in shared artifacts instead of assumptions.
+
+<ArticleImage
+  src="/case-studies/blinkist-design-system-component.png"
+  alt="Comparison of code and Figma component structure"
+  caption="Code and Figma components now speak the same language"
+  size="large"
+/>
+
+## Scaling understanding, not just components
+
+The next phase focused on consolidation. I ran workshops with designers to build a shared understanding of how we think about and construct components. This wasn’t about rules—it was about mental models.
+
+Rather than building every component myself, I focused on enabling other designers to take ownership. I guided them through reviews and feedback, helping them internalize the system's principles while contributing directly to its evolution. This approach scaled our output while building distributed expertise across the team.
+
+<ArticleImage
+  src="/case-studies/blinkist-design-system-review.png"
+  alt="A screenshot of our Figma file showing my comments on a UI component built by another designer"
+  caption="Guiding other designers through component reviews"
+  size="large"
+/>
+
+## Enabling AI coding
+
+Looking forward, the system is also being prepared as context for AI-assisted development, leveraging tools like Code Connect and MCP. The ambition is clear: scale frontend development without scaling confusion.
+
+<ArticleImage
+  src="/case-studies/blinkist-design-system-code-connect.png"
+  alt="A Figma component being connected to the code base via Figma Code Connect"
+  caption="Figma's Code Connect closes the design-code-gap even further and provides meaningful context for AI-agents to generate production ready code reliably"
+  size="large"
+/>
+
+## A system that changes how teams collaborate
+
+While adoption is still growing, both design and engineering are already using the system in their daily work. The most meaningful shift isn’t visual consistency—it’s trust. Trust that design decisions translate into code, and that shared foundations reduce friction instead of adding process.
+
+<ArticleImage
+  src="/case-studies/blinkist-design-system-color-1.png"
+  alt="Definition of color tokens – color scope"
+  size="large"
+/>
+
+<ArticleImage
+  src="/case-studies/blinkist-design-system-color-2.png"
+  alt="Definition of color tokens – color role"
+  caption="Design tokens help us speak the same language on the foundation level"
+  size="large"
+/>
+
+## What I took with me
+
+This project reinforced a core belief: design systems are less about components and more about alignment. The real work isn’t drawing buttons—it’s creating a shared understanding across disciplines, especially under pressure.
+
+For me, it was a lesson in leadership through facilitation: slowing down just enough to help teams move faster together.
