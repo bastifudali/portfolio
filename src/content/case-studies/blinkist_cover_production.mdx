@@ -26,8 +26,8 @@ The call was clear: could AI help us build a workflow to streamline the cover pr
 
 <ArticleImage
   src="/case-studies/blinkist-covers.png"
-  alt="Original book covers and their Blink counterparts"
-  caption="We transform original book covers into Blinkist's signature style — could AI handle this creative task?"
+  alt="Examples of Blink covers in Blinkist's signature style"
+  caption="Blink covers follow a consistent visual style — could AI handle producing them at scale?"
   size="large"
 />
 
@@ -44,22 +44,15 @@ That's when I came across [Anthropic's article on building effective agents](htt
 It explained how automation works best when you break a process into smaller, composable steps — often chaining tasks or using evaluator–optimizer loops rather than asking AI to do everything at once.
 This framing clicked with our experiments and helped us formalize a workflow:
 
-- Find the original book cover
+- Pull in book metadata
 - Generate three blink cover variants
 - Review the outputs
 - Provide feedback
 - Iterate until the result meets acceptance criteria
 
-<ArticleImage
-  src="/case-studies/blinkist-covers-workflow.png"
-  alt="AI cover generation workflow diagram"
-  caption="The iterative workflow showing how AI generates variants while humans provide guidance and approval"
-  size="large"
-/>
-
 ## Building the Tool
 
-The structure worked, but cracks quickly showed. Sometimes the AI picked the wrong original cover, introduced typos, or produced layouts that were simply unusable. The solution was to keep humans in the loop — but in a way that didn’t add friction.
+The structure worked, but cracks quickly showed. Sometimes the AI introduced typos or produced layouts that were simply unusable. The solution was to keep humans in the loop — but in a way that didn’t add friction.
 I built a web interface where content producers could run the entire process themselves. From this dashboard, they could:
 
 - Pull in book data directly from Airtable
