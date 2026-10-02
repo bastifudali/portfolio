@@ -11,8 +11,17 @@ export interface TimelineItem {
 // Professional experience data based on LinkedIn resume
 export const experienceData: TimelineItem[] = [
   {
+    id: "blinkist-2026",
+    overline: "Jan 2026 – Present",
+    title: "Staff Design Operations Specialist",
+    company: "Blinkist",
+    company_logo: "/blinkist-logo.png",
+    description:
+      "Leading AI adoption and workflow automation, building the design system, and designing and shipping product",
+  },
+  {
     id: "blinkist-2024",
-    overline: "Dec 2024 – Present",
+    overline: "Dec 2024 – Dec 2025",
     title: "Senior Product & Design Operations Specialist",
     company: "Blinkist",
     company_logo: "/blinkist-logo.png",
